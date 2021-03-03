@@ -46,9 +46,7 @@ export default {
   computed: {
     crumbs() {
       const fullPath = this.$route.fullPath;
-      const crumbsParams = fullPath.startsWith('/')
-        ? fullPath.substring(1).split('/')
-        : fullPath.split('/');
+      const crumbsParams = fullPath.startsWith('/') ? fullPath.substring(1).split('/') : fullPath.split('/');
       const crumbs = [];
       let path = '';
       crumbsParams.forEach((param, index) => {
@@ -62,9 +60,9 @@ export default {
         }
       });
       return crumbs;
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -74,16 +72,15 @@ ol {
 li {
   display: inline;
 }
-li:after {
-  /*content: ' » ';*/
-  content: url('~static/icons/chevron-right.svg');
+li::after {
+  content: " » ";
   display: inline;
   font-size: 0.9em;
-  color: #cccccc;
+  color: #ccc;
   padding: 0 0.25em 0 0.15em;
 }
-li:last-child:after {
-  content: '';
+li:last-child::after {
+  content: "";
 }
 li a {
   color: #5c5c5c;

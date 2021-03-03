@@ -4,8 +4,6 @@
 
 <script>
 export default {
-  name: 'PostCard',
-};
+  name: 'PostCard'
+}
 </script>
-
-<style scoped></style>

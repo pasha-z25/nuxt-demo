@@ -8,9 +8,9 @@ export default {
   computed: {
     preloader() {
       return this.$store.getters.preloader;
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -25,8 +25,8 @@ export default {
   margin-top: -40px;
   margin-left: -40px;
 }
-.lds-dual-ring:after {
-  content: '';
+.lds-dual-ring::after {
+  content: "";
   display: block;
   width: 64px;
   height: 64px;
