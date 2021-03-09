@@ -25,7 +25,9 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 [jsonplaceholder](http://jsonplaceholder.typicode.com/) - API data
 
-[configuration](https://tailwindcss.com/docs/configuration) - A guide to configuring and customizing
+[jsonplaceholder - data variations](https://github.com/typicode/json-server#paginate) - pagination, limits etc.
+
+[configuration](https://tailwindcss.com/docs/configuration) - A guide to configuring and customizing Tailwind
 
 [configuration reference](https://tailwindcss.com/docs/theme#configuration-reference) - All of these keys are also available under the theme.extend
 
