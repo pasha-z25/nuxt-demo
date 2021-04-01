@@ -62,7 +62,8 @@ export default {
   content: {},
 
   env: {
-    API_URL: 'http://jsonplaceholder.typicode.com'
+    API_URL: 'http://jsonplaceholder.typicode.com',
+    API_NUXT: 'https://api.nuxtjs.dev'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

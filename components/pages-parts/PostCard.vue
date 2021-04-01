@@ -1,8 +1,11 @@
 <template>
   <article class="post-card">
+    <div class="img-wrap relative bg-no-repeat bg-center bg-cover mb-6" :style="`background-image: url(${post.image})`"></div>
+    <!--    <img :src="post.image" :alt="post.title" />-->
     <p class="title">{{ post.title }}</p>
-    <p class="intro">{{ post.body.length > 100 ? `${post.body.substring(0, 100)}...` : post.body }}</p>
-    <nuxt-link :to="`/blog/${post.id}`" class="link">{{ $t('btnViewMore') }}</nuxt-link>
+    <p class="intro">{{ post.description.length > 100 ? `${post.description.substring(0, 100)}...` : post.description }}</p>
+    <p>{{ new Date(post.updatedAt).toDateString() }}</p>
+    <nuxt-link :to="`/blog/${post.slug}`" class="link">{{ $t('btnViewMore') }}</nuxt-link>
   </article>
 </template>
 
@@ -20,24 +23,20 @@ export default {
 
 <style scoped>
 .post-card {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #2b2b2b;
-  padding: 1rem;
+  @apply flex flex-col p-4 border border-solid border-gray-700;
 }
 .title {
-  font-size: 1.2rem;
-  line-height: 1.2;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  @apply text-20/24 font-bold mb-4;
 }
 .intro {
-  margin-bottom: 1.5rem;
-  flex: 1 1 auto;
+  @apply mb-6 flex-auto;
 }
 .link {
   text-decoration: underline;
   color: #146ba3;
   align-self: flex-end;
+}
+.img-wrap {
+  padding-top: 58%;
 }
 </style>

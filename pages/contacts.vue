@@ -3,7 +3,7 @@
     <p class="info">{{ $t('textContactFormInfo') }}</p>
     <form class="form" @submit.prevent="submitForm">
       <label class="input-group w-50">
-        <span class="label">Name</span>
+        <span class="label" @click.self="handler">Name</span>
         <input v-model="contactFormData.name" class="input" type="text" />
       </label>
       <label class="input-group w-50">

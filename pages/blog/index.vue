@@ -1,6 +1,7 @@
 <template>
   <section class="container">
-    <div class="posts-wrapper">
+    <!--    <pre>{{ posts[0] }}</pre>-->
+    <div v-if="posts.length" class="py-10 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       <post-card v-for="(post, index) of posts" :key="index" :post="post" />
     </div>
   </section>
@@ -12,7 +13,7 @@ export default {
   components: { PostCard },
   fetch({ store }) {
     if (store.getters['posts/posts'].length === 0) {
-      store.dispatch('posts/fetchPosts', `${process.env.API_URL}/posts?_limit=20`)
+      store.dispatch('posts/fetchPosts', `${process.env.API_NUXT}/posts`)
     }
   },
   computed: {
@@ -25,24 +26,7 @@ export default {
 
 <style scoped>
 .posts-wrapper {
-  display: grid;
   grid-gap: 30px;
   gap: 30px;
-}
-
-@media screen and (min-width: 640px) {
-  .posts-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 992px) {
-  .posts-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .posts-wrapper {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 </style>

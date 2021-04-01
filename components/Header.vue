@@ -29,18 +29,13 @@ export default {
   padding-bottom: 1rem;
 }
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  @apply flex flex-wrap items-center justify-between;
 }
 .menu {
-  display: flex;
-  align-items: center;
+  @apply flex items-center;
 }
 .menu-link {
   display: inline-block;
-  padding: 5px 15px;
   opacity: 0.5;
   font-weight: 600;
   transition: all 0.3s linear;
@@ -48,5 +43,8 @@ export default {
 .menu-link:hover,
 .menu-link.nuxt-link-active {
   opacity: 1;
+}
+.menu li + li {
+  margin-left: 15px;
 }
 </style>

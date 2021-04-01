@@ -7,7 +7,7 @@ export default {
   name: 'Preloader',
   computed: {
     preloader() {
-      return this.$store.getters.preloader;
+      return this.$store.getters.preloader
     }
   }
 }
@@ -26,7 +26,7 @@ export default {
   margin-left: -40px;
 }
 .lds-dual-ring::after {
-  content: "";
+  content: '';
   display: block;
   width: 64px;
   height: 64px;
