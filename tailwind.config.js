@@ -3,13 +3,14 @@ module.exports = {
     extend: {
       screens: {
         xs: '425px',
-        dt: '992px',
+        dt: '992px'
       },
       colors: {
         transparent: 'transparent',
+        transp: 'transparent'
       },
       backgroundColor: {
-        blue: '#146ba3',
+        blue: '#146ba3'
       },
       fontSize: {
         '12/16': ['12px', { lineHeight: '16px' }],
@@ -21,14 +22,14 @@ module.exports = {
         '20/24': ['20px', { lineHeight: '24px' }],
         '24/24': ['24px', { lineHeight: '1' }],
         '28/28': ['28px', { lineHeight: '1' }],
-        '32/32': ['32px', { lineHeight: '1' }],
+        '32/32': ['32px', { lineHeight: '1' }]
       },
       spacing: {
-        '10p': '10px',
+        '10p': '10px'
       },
       maxWidth: {
-        '1/2': '50%',
-      },
-    },
-  },
+        '1/2': '50%'
+      }
+    }
+  }
 }

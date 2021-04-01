@@ -1,19 +1,19 @@
 export const state = () => ({
-  preloader: false,
-});
+  preloader: false
+})
 
 export const mutations = {
   togglePreloader(state) {
-    state.preloader = !state.preloader;
-  },
-};
+    state.preloader = !state.preloader
+  }
+}
 
 export const actions = {
   changePreloaderStatus({ commit }) {
-    commit('togglePreloader');
-  },
-};
+    commit('togglePreloader')
+  }
+}
 
 export const getters = {
-  preloader: (state) => state.preloader,
-};
+  preloader: state => state.preloader
+}

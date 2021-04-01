@@ -5,14 +5,14 @@ export default {
   head: {
     title: 'nuxt-demo',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: '' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -31,7 +31,7 @@ export default {
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
+    '@nuxtjs/tailwindcss'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -48,11 +48,11 @@ export default {
         vueI18n: {
           fallbackLocale: 'en',
           messages: {
-            de: english,
-          },
-        },
-      },
-    ],
+            en: english
+          }
+        }
+      }
+    ]
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -63,10 +63,11 @@ export default {
 
   env: {
     API_URL: 'http://jsonplaceholder.typicode.com',
+    API_NUXT: 'https://api.nuxtjs.dev'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  loading: { color: '#146ba3' },
+  loading: { color: '#146ba3' }
 }
